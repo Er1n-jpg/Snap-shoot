@@ -1,60 +1,53 @@
-import './style.css'
-import javascriptLogo from './assets/javascript.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import { setupCounter } from './counter.js'
+// @ts-nocheck
+const pages = {
+    home: `
+        <h1 class="text-2xl font-bold text-gray-800 mb-3">Home</h1>
+        <p class="text-gray-500">Welcome to SnapShoot!</p>
+    `,
+    faq: `
+        <h1 class="text-5xl font-bold text-gray-800 mb-3">FAQ</h1>
+        <div class = " grid grid-cols-2 gap-4 p-4">
+            <div class = "bg-white rounded-xl border border-gray-200 p-4">
+                <h4 class="text-gray-500 text-xl"> What is snapshoot?</h4>
+                <p class="text-gray-500 ">Snapshoot is a YSWS where you can get grants for camera or visual related items when you ship a project usind openCV</p>
+            </div>
 
-document.querySelector('#app').innerHTML = `
-<section id="center">
-  <div class="hero">
-    <img src="${heroImg}" class="base" width="170" height="179">
-    <img src="${javascriptLogo}" class="framework" alt="JavaScript logo"/>
-    <img src=${viteLogo} class="vite" alt="Vite logo" />
-  </div>
-  <div>
-    <h1>Get started</h1>
-    <p>Edit <code>src/main.js</code> and save to test <code>HMR</code></p>
-  </div>
-  <button id="counter" type="button" class="counter"></button>
-</section>
+            <div class = "bg-white rounded-xl border border-gray-200 p-4">
+                <h4 class = "text-gray-500 text-xl"> Is this legit?</h4>
+                <p class = "text-gray-500"> Snapshoot is under Hack Club, a 501(c)3 nonprofit and is primarily run by @erook on slack"</p>
+            </div>
 
-<div class="ticks"></div>
+            <div class = "bg-white rounded-xl border border-gray-200 p-4">
+                <h4 class = "text-gray-500 text-xl"> I'm a beginner, can I still do this?</h4>
+                <p class = "text-gray-500"> Of course! OpenCV has plenty of doccumentation online, not to mention we will have tutorials avalible for you to follow on various languages!"</p>
+            </div>
 
-<section id="next-steps">
-  <div id="docs">
-    <svg class="icon" role="presentation" aria-hidden="true"><use href="/icons.svg#documentation-icon"></use></svg>
-    <h2>Documentation</h2>
-    <p>Your questions, answered</p>
-    <ul>
-      <li>
-        <a href="https://vite.dev/" target="_blank">
-          <img class="logo" src=${viteLogo} alt="" />
-          Explore Vite
-        </a>
-      </li>
-      <li>
-        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-          <img class="button-icon" src="${javascriptLogo}" alt="">
-          Learn more
-        </a>
-      </li>
-    </ul>
-  </div>
-  <div id="social">
-    <svg class="icon" role="presentation" aria-hidden="true"><use href="/icons.svg#social-icon"></use></svg>
-    <h2>Connect with us</h2>
-    <p>Join the Vite community</p>
-    <ul>
-      <li><a href="https://github.com/vitejs/vite" target="_blank"><svg class="button-icon" role="presentation" aria-hidden="true"><use href="/icons.svg#github-icon"></use></svg>GitHub</a></li>
-      <li><a href="https://chat.vite.dev/" target="_blank"><svg class="button-icon" role="presentation" aria-hidden="true"><use href="/icons.svg#discord-icon"></use></svg>Discord</a></li>
-      <li><a href="https://x.com/vite_js" target="_blank"><svg class="button-icon" role="presentation" aria-hidden="true"><use href="/icons.svg#x-icon"></use></svg>X.com</a></li>
-      <li><a href="https://bsky.app/profile/vite.dev" target="_blank"><svg class="button-icon" role="presentation" aria-hidden="true"><use href="/icons.svg#bluesky-icon"></use></svg>Bluesky</a></li>
-    </ul>
-  </div>
-</section>
+            <div class = "bg-white rounded-xl border border-gray-200 p-4 transform hover: scale-105">
+                <h4 class = "text-gray-500 text-xl"> Am I elegible to participate in SnapShoot?</h4>
+                <p class = "text-gray-500"> You must be 13-18 to participate in Snapshoot!</p>
+            </div>
 
-<div class="ticks"></div>
-<section id="spacer"></section>
-`
+            <div class = "bg-white rounded-xl border border-gray-200 p-4 transform hover: scale-105">
+                <h4 class = "text-gray-500 text-xl"> How do I get started?</h4>
+                <p class = "text-gray-500"> You can get started by filling out the RSVP form and getting yourself on hack club slack (join channel #SnapShoot)</p>
+                <button class = "bg-white rounded-xl border hover: scale-105"> RSVP </button>
+                <button class = "bg-white rounded-xl border"> Slack! </button>
 
-setupCounter(document.querySelector('#counter'))
+            </div>
+
+            <div class = "bg-white rounded-xl border-gray-200 p-4">
+
+            </div>
+
+                
+    `,
+    prizes: `
+        <h1 class="text-2xl font-bold text-gray-800 mb-3">Prizes</h1>
+        <p class="text-gray-500"> When you finish shipping your project, you will be granted many prizes </p>
+    `,
+}
+
+function loadPage(name){
+    document.getElementById('window').innerHTML = pages [name]
+}
+
