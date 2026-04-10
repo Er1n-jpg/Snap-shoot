@@ -6,7 +6,7 @@ const pages = {
     faq: `
         <h1 class="text-5xl font-bold text-gray-800 mb-3">FAQ</h1>
         <div class="grid grid-cols-2 gap-4 p-4">
-            <div class="bg-white rounded-xl border border-gray-200 p-4 hover:scale-105">
+            <div class="bg-white rounded-xl border border-gray-200 p-4 ">
                 <h4 class="text-gray-500 text-xl">What is snapshoot?</h4>
                 <p class="text-gray-500 text-xs">Snapshoot is a YSWS where you can get grants for camera or visual related items when you ship a project using openCV</p>
             </div>
