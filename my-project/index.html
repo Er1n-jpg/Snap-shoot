@@ -8,36 +8,34 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Gugi&family=Handjet:wght,ELSH@100..900,2&family=Indie+Flower&family=Knewave&family=Lalezar&family=Pixelify+Sans:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-    <script src="main.js" defer></script>
-    <link href="/style.css" rel="stylesheet">
+    <script src="src/main.js" defer></script>
+    <link href="style.css" rel="stylesheet">
 
 </head>
 
 <body class="h-screen pt-25 px-2 bg-gray-200 overflow-x-hidden">
 
-    <div class="flex gap-4 items-start h-full relative flex ">
-
+    <div class="flex gap-4 items-start h-full relative flex">
 
         <!-- Screen -->
-        <div class="flex-[3]  text-9xl bg-white w-full h-full rounded-xl p-4 flex flex-col items-center justify-center">
-            <h1 class=" font-sans -ml-20"> Snap </h1>
-            <h1 class="font-clean ml-20 "> Shoot </h1>
+        <div class="flex-[3] text-9xl bg-white w-full h-full rounded-xl p-4 flex flex-col items-center justify-center" id="window">
+            <div class="hover:scale-105 transition-transform">
+                <h1 class="-ml-15 -mb-8 font-semibold">Snap</h1>
+                <h1 class="ml-15 font-semibold">Shoot</h1>
+            </div>
+            <p class="text-sm mt-8 -ml-50">Make a program with openCV, get materials for a camera!</p>
 
         </div>
 
-        <!-- Buttons -->
         <div class="flex-[1] flex flex-col gap-2">
             <button onclick="loadPage('faq')"
-                class="w-full bg-white text-blue-500 px-6 py-3 rounded-xl font-mono border border-blue-400 hover:scale-105"
-                id="FAQ">FAQ</button>
-            <button onclick="loadPage('')"
+                class="w-full bg-white text-blue-500 px-6 py-3 rounded-xl font-mono border border-blue-400 hover:scale-105" id="FAQ">FAQ</button>
+            <button onclick="loadPage('what')"
                 class="w-full bg-white text-gray-700 px-6 py-3 rounded-xl font-mono border border-gray-300 hover:scale-105"
                 id="what">What is this?</button>
-            <button
-                class="w-full bg-white text-gray-700 px-6 py-3 rounded-xl font-mono border border-gray-300 hover:scale-105 transition-all duration-300 ease-in-out"
+            <button onclick="loadPage('prizes')" class="w-full bg-white text-gray-700 px-6 py-3 rounded-xl font-mono border border-gray-300 hover:scale-105 hover:"
                 id="Prizes">Prizes</button>
         </div>
-
     </div>
 
 </body>
