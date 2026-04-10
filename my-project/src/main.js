@@ -56,3 +56,6 @@ function loadPage(name) {
 }
 
 
+window.loadPage = function(name) {
+    document.getElementById('window').innerHTML = pages[name]
+}
